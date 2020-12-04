@@ -1,0 +1,76 @@
+div.slide {
+    min-height: 100vh;
+    position: relative;
+}
+
+li {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+}
+
+ul ul {
+    margin-top: 0;
+}
+
+ul {
+    margin-left: 3rem;
+}
+
+.footer {
+    position: absolute;
+    bottom: 150px;
+}
+
+.center {
+    text-align: center;
+}
+
+.center-screen {
+    text-align: center;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.full-image img {
+    width: 80%;
+}
+
+.full-image p {
+    text-align: center;
+}
+
+.large {
+    font-size: 2rem;
+}
+
+.large a {
+    font-size: 2rem;
+}
+
+.code code {
+    background-color: black;
+    color: white;
+    font-size: 1.3rem;
+    padding: 20px;
+    display: block;
+}
+
+.code code::before {
+    content: '$';
+    color: lime;
+    margin-right: 10px;
+}
+
+.code.danger code {
+    background-color: #d70000;;
+}
+
+.markdown-body .highlight pre, .markdown-body pre {
+    font-size: 1.3rem;
+}

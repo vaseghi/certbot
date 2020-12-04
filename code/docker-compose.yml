@@ -1,0 +1,28 @@
+version: "3.8"
+
+services:
+  nginx:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    volumes:
+      - /soheil/certificate:/etc/letsencrypt
+      - /soheil/www:/var/www/certbot
+    ports:
+      - "80:80"
+      - "443:443"
+    container_name: nginx
+    restart: always
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    expose:
+      - "5000"
+    depends_on:
+      - nginx
+      - database
+    container_name: kestrel
+    restart: always

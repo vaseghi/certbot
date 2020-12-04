@@ -1,0 +1,2 @@
+* 0 * * * root certbot certonly --webroot --webroot-path /var/www/certbot --email vaseghi.soheil@gmail.com --non-interactive -d soheilvaseghi.com --rsa-key-size 4096 --agree-tos
+* 0 * * * root nginx -s reload
